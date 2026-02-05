@@ -8,8 +8,6 @@ class LoginPage(BasePage):
         self.phone_input = page.locator("form").get_by_role("textbox")
         self.otp_btn = page.get_by_role("button", name="Request OTP")
 
-    def navigate(self):
-        self.page.goto("https://www.flipkart.com")
 
     def login(self, mobile):
         if self.login_trigger.first.is_visible():
