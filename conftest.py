@@ -17,19 +17,15 @@ def logged_in_page(page):
 
 @pytest.fixture(scope="function")
 def browser_context_args(browser_context_args):
-    return {
-        **browser_context_args,
-        "storage_state": {
-            "cookies": [
-                {
-                    "name": "SOCS",
-                    "value": "CAISHAgBEhJnd3NfMjAyMzA4MzAtMF9SQzEaAmVuIAEaBgiA_LKmBg",
-                    "domain": ".google.com",
-                    "path": "/",
-                }
-            ]
+    state_path = "flipkart_state.json"
+    
+    # Check if the auth file exists before trying to use it
+    if os.path.exists(state_path):
+        return {
+            **browser_context_args,
+            "storage_state": state_path
         }
-    }
+    return browser_context_args
 
 @pytest.hookimpl(tryfirst=True, hookwrapper=True)
 def pytest_runtest_makereport(item, call):
