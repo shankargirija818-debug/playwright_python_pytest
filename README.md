@@ -1,4 +1,21 @@
-project_root/
+# Playwright Python Pytest Automation
+
+This project automates UI testing for Flipkart using Playwright and Pytest.
+
+## 🚀 Getting Started
+
+### Prerequisites
+* Python 3.8+
+* [Optional] Virtual Environment
+
+### Installation
+1. Clone the repo:
+   ```bash
+   git clone [https://github.com/your-username/playwright_python_pytest.git](https://github.com/your-username/playwright_python_pytest.git)
+
+##### Architecture ##########
+'''
+   project_root/
 │
 ├── conftest.py                # Fixtures for browser setup
 ├── requirements.txt           # Dependencies
@@ -17,3 +34,5 @@ project_root/
 └── tests/
     ├── test_base.py           # Base Test class
     └── test_flipkart.py       # Actual test cases
+   
+'''
