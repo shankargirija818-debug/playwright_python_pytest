@@ -36,3 +36,16 @@ This project automates UI testing for Flipkart using Playwright and Pytest.
     └── test_flipkart.py       # Actual test cases
    
 '''
+
+"""
+
+       Goal:	               Command:
+Stop instantly on fail:	    pytest -x
+Stop after 3 fails :	       pytest --maxfail=3
+Filter by name	:            pytest -k "my_function_name"
+Only run previous fails :	 pytest --lf
+Run all, but fails first :	 pytest --ff
+Clear the cache : 	       pytest --cache-clear
+
+
+"""
