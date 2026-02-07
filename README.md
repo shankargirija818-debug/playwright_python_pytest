@@ -47,5 +47,24 @@ Only run previous fails :	 pytest --lf
 Run all, but fails first :	 pytest --ff
 Clear the cache : 	       pytest --cache-clear
 
-
 """
+<!-- 
+> Run on a specific browser :  @pytest.mark.only_browser("chromium")
+> Skip test by browse :        @pytest.mark.skip_browser("firefox")
+
+> Run with a custom browser channel like Google Chrome : pytest --browser-channel chrome
+> Configure base-url:    pytest --base-url http://localhost:8080
+> To generate the single-file report, run:  pytest --html=report.html --self-contained-html
+> Change Log Capture Behavior: pytest --html=report.html --show-capture=no Options for --show-capture include: no, stdout, stderr, or log.
+> Collapse Passed Tests: To make the report easier to read, you can force the report to open with "Passed" rows collapsed: pytest --html=report.html --collapse-seeds
+> Integrating with Coverage: pytest --cov=my_app --cov-report=html --html=report.html --self-contained-html
+> Generating a Separate JSON Report: pytest --html=report.html --self-contained-html --json-report --json-report-file=report.json
+
+ -->
+
+ <!-- 
+ >  set_viewport_size: 
+ page = browser.new_page()
+ page.set_viewport_size({"width": 640, "height": 480})
+ 
+  -->

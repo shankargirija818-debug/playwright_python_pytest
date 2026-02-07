@@ -5,6 +5,7 @@ from datetime import datetime
 @pytest.fixture(scope="function")
 def page(context):
     page = context.new_page()
+    page.set_viewport_size({"width": 1536, "height": 695})
     yield page
     page.close()
 
