@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Automation Practice: Field States</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; background: #f4f4f9; }
+        .container { max-width: 500px; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .field-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        
+        /* Visual cues for different states */
+        input:read-only { background-color: #e9ecef; cursor: not-allowed; border-color: #adb5bd; }
+        input:disabled { background-color: #dee2e6; opacity: 0.6; cursor: wait; }
+        input:focus { border-color: #007bff; outline: none; }
+        
+        .status { margin-top: 10px; font-size: 0.9em; color: #555; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Field State Practice</h2>
+    
+    <div class="field-group">
+        <label for="edit-me">1. Editable Field:</label>
+        <input type="text" id="edit-me" placeholder="You can type here...">
+    </div>
+
+    <div class="field-group">
+        <label for="read-only-field">2. Read-Only Field:</label>
+        <input type="text" id="read-only-field" value="View only text" readonly>
+    </div>
+
+    <div class="field-group">
+        <label for="disabled-field">3. Disabled Field:</label>
+        <input type="text" id="disabled-field" value="I am totally disabled" disabled>
+    </div>
+
+    <button onclick="toggleFields()">Toggle States (JS Check)</button>
+    <p class="status">Note: Read-only fields can be focused/copied; Disabled fields cannot.</p>
+</div>
+
+<script>
+    function toggleFields() {
+        const edit = document.getElementById('edit-me');
+        // Simple JS to prove logic
+        console.log("Editable is readonly?", edit.readOnly);
+        console.log("Read-only is readonly?", document.getElementById('read-only-field').readOnly);
+    }
+</script>
+
+</body>
+</html>
